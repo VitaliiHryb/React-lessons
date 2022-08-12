@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // const style = { color: 'red', fontWeight: '700' };
 
-const Search = props => {
+export default Search = props => {
   // console.log(props);
   return (
     <div className="search">
