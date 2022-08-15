@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import './index.scss';
 
-const formatDate = date => moment(date).format('DD MMM YYYY');
+const formatDate = date => moment(date).format('DD MMM YY');
 
 function Profile(props) {
   return (
@@ -20,3 +20,5 @@ function Profile(props) {
 }
 
 export default Profile;
+
+//  Was born 17 Jan 91 in London
