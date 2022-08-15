@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from './Greeting';
+import Profile from './Profile';
 
 const userData = {
   firstName: 'John',
