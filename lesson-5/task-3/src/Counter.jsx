@@ -24,6 +24,7 @@ class Counter extends Component {
   //   });
   // }
 
+  // эксперементальный синтаксис (уже была установлена библеотека, так как я использовал React App)
   increment = () => {
     this.setState({
       counter: this.state.counter + 1,
