@@ -24,12 +24,20 @@ class Counter extends Component {
   //   });
   // }
 
-  // эксперементальный синтаксис (уже была установлена библеотека, так как я использовал React App)
+  // эксперементальный синтаксис
+  // (уже была установлена библеотека, так как я использовал React App)
   increment = () => {
     this.setState({
       counter: this.state.counter + 1,
     });
   };
+
+  // стрелочкая ф-я
+  reset() {
+    this.setState({
+      counter: 0,
+    });
+  }
 
   render() {
     return (
@@ -37,7 +45,9 @@ class Counter extends Component {
         <button className="counter__button" onClick={this.decrement}>
           -
         </button>
-        <span className="counter__value">{this.state.counter}</span>
+        <span className="counter__value" onClick={() => this.reset()}>
+          {this.state.counter}
+        </span>
         <button className="counter__button" onClick={this.increment}>
           +
         </button>
