@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 class GoodButton extends Component {
   handleClick(e) {
     // console.log(e); // got Synthetic event
-    console.log(e.target.textContent);
-    console.log(e);
-    console.log(e.screenX);
+    // console.log(e.target.textContent);
+    // console.log(e);
+    // console.log(e.screenX);
 
     alert('Good job!');
   }
