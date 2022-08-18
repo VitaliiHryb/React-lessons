@@ -18,17 +18,17 @@ class Colors extends Component {
         <button
           style={{ backgroundColor: RED }}
           onClick={() => this.setBodyColor(RED)}
-          className="colors-button"
+          className="colors__button"
         />
         <button
           style={{ backgroundColor: GREEN }}
           onClick={() => this.setBodyColor(GREEN)}
-          className="colors-button"
+          className="colors__button"
         />
         <button
           style={{ backgroundColor: BLUE }}
           onClick={() => this.setBodyColor(BLUE)}
-          className="colors-button"
+          className="colors__button"
         />
       </div>
     );
