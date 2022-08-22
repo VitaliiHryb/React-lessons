@@ -12,7 +12,7 @@ class Status extends Component {
 
   setText = isOnline => {
     this.setState({
-      isOnline,
+      isOnline: true,
     });
   };
 
