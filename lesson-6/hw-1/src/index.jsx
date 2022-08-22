@@ -4,4 +4,4 @@ import './index.scss';
 import Status from './Status';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Status />);
+root.render(<Status isOnline={true} />);
