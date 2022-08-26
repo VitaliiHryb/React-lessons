@@ -1,6 +1,6 @@
 import React from 'react';
 
-const User = ({ id, name, age }) => {
+const User = ({ name, age }) => {
   return (
     <li className="user">
       <span className="user__name">{name}</span>
