@@ -23,7 +23,7 @@ class Life extends Component {
     // this.props => будем работать с новыми props
     // console.log(prevProps);
     console.log(
-      `componentDidUpdate(${prevProps}, ${prevState}): some updates based on new props`,
+      'componentDidUpdate(prevProps, prevState): some updates based on new props',
     );
   }
 
