@@ -20,8 +20,8 @@ class ConnectionStatus extends React.Component {
   }
 
   componentWillUnmount() {
-    window.addEventListener('online', this.checkStatus);
-    window.addEventListener('offline', this.checkStatus);
+    window.removeEventListener('online', this.checkStatus);
+    window.removeEventListener('offline', this.checkStatus);
   }
 
   checkStatus = event => {
