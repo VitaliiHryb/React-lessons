@@ -15,13 +15,13 @@ class ConnectionStatus extends React.Component {
   };
 
   componentDidMount() {
-    window.addEventListener('online', checkStatus);
-    window.addEventListener('offline', checkStatus);
+    window.addEventListener('online', this.checkStatus);
+    window.addEventListener('offline', this.checkStatus);
   }
 
   componentDidMount() {
-    window.addEventListener('online', checkStatus);
-    window.addEventListener('offline', checkStatus);
+    window.addEventListener('online', this.checkStatus);
+    window.addEventListener('offline', this.checkStatus);
   }
 
   checkStatus(event) {
