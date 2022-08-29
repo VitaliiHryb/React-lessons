@@ -24,11 +24,11 @@ class ConnectionStatus extends React.Component {
     window.addEventListener('offline', this.checkStatus);
   }
 
-  checkStatus(event) {
+  checkStatus = event => {
     this.setState({
       status: event.type,
     });
-  }
+  };
 
   render() {
     const statusClass = this.state.status === 'offline' ? 'status_offline' : '';
