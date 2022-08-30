@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import ConnectionStatus from './ConnectionStatus';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<ConnectionStatus />);
+// userData = {
+//   name: 'Vitalii',
+//   student: true,
+//   occupation: 'Kyiv',
+//   about: 'Hi',
+// };
+
+// root.render(<App userData={userData} />);
+
+root.render(<App />);
