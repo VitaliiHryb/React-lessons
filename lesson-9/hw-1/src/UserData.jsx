@@ -1,5 +1,5 @@
 import React from 'react';
-import UserList from './UserList';
+import UserList from './UsersList';
 
 const users = [
   { id: 'id-0', name: 'John', age: 29 },
@@ -11,7 +11,7 @@ const users = [
 ];
 
 const UserData = () => {
-  return <UserList users={users} />;
+  return <UsersList users={users} />;
 };
 
 export default UserData;

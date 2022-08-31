@@ -15,7 +15,7 @@ import React from 'react';
 import Filter from './Filter';
 import User from './User';
 
-class UserList extends React.Component {
+class UsersList extends React.Component {
   state = {
     searchValue: '',
   };
@@ -51,7 +51,7 @@ class UserList extends React.Component {
   }
 }
 
-export default UserList;
+export default UsersList;
 
 // input: список пользователей в свойстве users
 // output: отображает поле для фильтрации и список пользователей
