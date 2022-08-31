@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import ConnectionStatus from './ConnectionStatus';
+import Game from './Game';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<ConnectionStatus />);
+root.render(<Game />);
