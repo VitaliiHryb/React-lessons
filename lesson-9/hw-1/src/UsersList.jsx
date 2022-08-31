@@ -29,11 +29,9 @@ class UsersList extends React.Component {
   render() {
     let users = [...this.props.users];
     if (this.state.searchValue) {
-      users = users.filter(
-        ({ name }) =>
-          name.toLowerCase().indexOf(this.state.searchValue.toLowerCase()) !==
-          -1,
-      );
+      users = users.filter(({ name }) => {
+        name.toLowerCase().indexOf(this.state.searchValue.toLowerCase()) !== -1;
+      });
     }
 
     users = users.map(({ id, ...user }) => <User key={id} {...user} />);
