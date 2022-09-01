@@ -3,20 +3,23 @@ import CartTitle from './CartTitle';
 import ProductsList from './ProductsList';
 
 class ShoppingCart extends React.Component {
-  state = {
-    cartItems: [
-      {
-        id: '1',
-        name: 'iPhone 11',
-        price: 999,
-      },
-      {
-        id: '2',
-        name: 'iPad 1Pro',
-        price: 799,
-      },
-    ],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      cartItems: [
+        {
+          id: '1',
+          name: 'iPhone 11',
+          price: 999,
+        },
+        {
+          id: '2',
+          name: 'iPad 1Pro',
+          price: 799,
+        },
+      ],
+    };
+  }
 
   render() {
     return (
@@ -32,3 +35,8 @@ class ShoppingCart extends React.Component {
 }
 
 export default ShoppingCart;
+
+// В файле src/ShoppingCart.jsx, опиши компоненту,
+// которая принимает имя пользователя в свойстве userName
+// и хранит в состоянии массив товаров. App.
+// ShoppingCart должна отрисовать CartTitle и ProductsList

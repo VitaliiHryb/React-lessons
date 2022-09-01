@@ -20,3 +20,8 @@ function ProductsList({ cartItems }) {
 }
 
 export default ProductsList;
+
+// В файле src/ProductsList.jsx, опиши компоненту,
+// которая принимает массив товаров в свойстве cartItems
+// ([{ id: '2', name: 'iPad Pro', price: 799 }, ...])
+// и отображает список товаров и total под ним.

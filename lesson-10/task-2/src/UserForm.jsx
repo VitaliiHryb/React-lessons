@@ -22,3 +22,10 @@ function UserForm({ userData, handleChange }) {
 }
 
 export default UserForm;
+
+//В файле src/UserForm.jsx, опиши компоненту,
+// которая принимает объект пользователя в свойстве userData
+// ({ firstName: 'John', lastName: 'Doe' })
+// и отрисовует поля для редактирования lastName и firstName.
+// UserForm не должна сама хранить состояние, а должна изменять данные пользователя,
+// который храниться в App
