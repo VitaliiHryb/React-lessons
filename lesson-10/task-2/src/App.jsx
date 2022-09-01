@@ -5,8 +5,8 @@ import Profile from './Profile';
 class App extends React.Component {
   state = {
     userData: {
-      firstName: 'Tom',
-      lastName: 'Ford',
+      firstName: 'John',
+      lastName: 'Doe',
     },
   };
 
