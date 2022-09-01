@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserForm = ({ userData, handleChange }) => {
+function UserForm({ userData, handleChange }) {
   return (
     <form className="user-form">
       <input
@@ -19,6 +19,6 @@ const UserForm = ({ userData, handleChange }) => {
       />
     </form>
   );
-};
+}
 
 export default UserForm;
