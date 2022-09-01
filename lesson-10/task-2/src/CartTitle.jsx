@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CartTitle = ({ userName, count }) => {
+function CartTitle({ count, userName }) {
   return (
-    <div className="cart-title">{`${userName}, you addded ${count} products`}</div>
+    <div className="cart-title">{`${userName}, you added ${count} items`}</div>
   );
-};
+}
 
 export default CartTitle;
