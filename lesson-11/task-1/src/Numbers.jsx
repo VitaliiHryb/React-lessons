@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Numbers extends React.PureComponent {
   // shouldComponentUpdate(nextProps) {
@@ -20,6 +21,16 @@ class Numbers extends React.PureComponent {
     );
   }
 }
+
+Numbers.propTypes = {
+  title: PropTypes.string,
+  number: PropTypes.number.isRequired,
+};
+
+Numbers.defaultProps = {
+  title: 'Some number',
+};
+
 // !!!
 // userData = { name: 'Tom', age: 17}
 // если поменять 17 на 18, то компонента не поменяется,
