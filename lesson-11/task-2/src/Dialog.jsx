@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Dialog({ title, onClose, children }) {
+function Dialog({ isOpen, title, onClose, children }) {
+  if (!isOpen) {
+    return null;
+  }
+
   return (
     <div className="dialog">
       <div className="dialog__heading">

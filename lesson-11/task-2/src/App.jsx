@@ -6,12 +6,14 @@ class App extends React.Component {
     isOpen: false,
   };
 
-  showDialog = () => {
-    this.setState({ isOpen: true });
+  hideDialog = () => {
+    this.setState({
+      isOpen: false,
+    });
   };
 
-  onClose = () => {
-    this.setState({ isOpen: false });
+  showDialog = () => {
+    this.setState({ isOpen: true });
   };
 
   render() {
@@ -27,11 +29,13 @@ class App extends React.Component {
         <button className="btn" onClick={this.showDialog}>
           Show dialog
         </button>
-        {this.state.isOpen && (
-          <Dialog onClose={this.onClose} title={'Recommendation'}>
-            {elem}
-          </Dialog>
-        )}
+        <Dialog
+          isOpen={this.state.isOpen}
+          onClose={this.hideDialog}
+          title={'Recommendation'}
+        >
+          {elem}
+        </Dialog>
       </div>
     );
   }
