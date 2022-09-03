@@ -16,12 +16,14 @@ function Dialog({ title, onClose, children }) {
 }
 
 Dialog.propTypes = {
+  isOpen: PropTypes.bool,
   title: PropTypes.string,
   children: PropTypes.element.isRequired,
   onClose: PropTypes.func.isRequired,
 };
 
 Dialog.defaultProps = {
+  isOpen: false,
   title: '',
 };
 
