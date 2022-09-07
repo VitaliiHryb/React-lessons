@@ -1,47 +1,57 @@
 import React from 'react';
 import Task from './Task';
 import CreateTaskInput from './CreateTaskInput';
+import {
+  createTask,
+  fetchTasksList,
+  updateTask,
+  deleteTask,
+} from './tasksGateway';
+
+// const baseUrl = 'https://62e9354b01787ec712138da8.mockapi.io/api/v1/tasks';
+// const baseUrl =
+//  'https://crudcrud.com/api/aceaaf9419fe464ca2f7ebcee5419139/tasks';
 
 class TaskList extends React.Component {
   state = {
-    tasks: [
-      { text: 'Buy milk', done: false, id: 1 },
-      { text: 'Pick up Tom from airport', done: false, id: 2 },
-      { text: 'Visit party', done: false, id: 3 },
-      { text: 'Visit doctor', done: true, id: 4 },
-      { text: 'Buy meat', done: true, id: 5 },
-    ],
+    tasks: [],
+  };
+
+  componentDidMount() {
+    this.fetchTasks();
+  }
+
+  fetchTasks = () => {
+    fetchTasksList().then(tasksList =>
+      this.setState({
+        tasks: tasksList,
+      }),
+    );
   };
 
   onCreate = text => {
-    const { tasks } = this.state;
     const newTask = {
-      id: Math.random(),
       text,
       done: false,
     };
-    const updatedTasks = tasks.concat(newTask);
-    this.setState({ tasks: updatedTasks });
+
+    createTask(newTask).then(() => {
+      this.fetchTasks();
+    });
   };
 
   handleTaskStatusChange = id => {
-    const updatedTasks = this.state.tasks.map(task => {
-      if (task.id === id) {
-        // task.done = !task.done; это мутация обекта
-        return {
-          ...task,
-          done: !task.done,
-        };
-      }
+    const { done, text } = this.state.tasks.find(task => task.id === id);
+    const updatedTask = {
+      text,
+      done: !done,
+    };
 
-      return task;
-    });
-    this.setState({ tasks: updatedTasks });
+    updateTask(id, updatedTask).then(() => this.fetchTasks());
   };
 
   handleTaskDelete = id => {
-    const updatedTasks = this.state.tasks.filter(task => task.id !== id);
-    this.setState({ tasks: updatedTasks });
+    deleteTask(id).then(() => this.fetchTasks());
   };
 
   render() {
@@ -65,13 +75,3 @@ class TaskList extends React.Component {
 }
 
 export default TaskList;
-
-// [
-//   { text: 'Buy milk', done: false, id: 1 },
-//   { text: 'Pick up Tom from airport', done: false, id: 2 },
-//   { text: 'Visit party', done: false, id: 3 },
-//   { text: 'Visit doctor', done: true, id: 4 },
-//   { text: 'Buy meat', done: true, id: 5 },
-// ];
-
-// value={task.done} ==> defaultChecked
