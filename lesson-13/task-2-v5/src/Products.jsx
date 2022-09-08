@@ -26,6 +26,8 @@ function Products({ match }) {
 
 export default Products;
 
+// Expected: \"To products\"\nReceived: \"To Products\"\
+
 // <Route path={`${match.url}/:productId`} component={Product} />
 
 // with Hooks

@@ -11,6 +11,8 @@ const Product = ({ match }) => {
 
 export default Product;
 
+// Expected: \"To products\"\nReceived: \"To Products\"\
+
 /*
 const Product = ({ match }) => {
   return (
