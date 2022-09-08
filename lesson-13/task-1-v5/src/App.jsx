@@ -29,3 +29,5 @@ const App = () => {
 };
 
 export default App;
+
+// "TypeError: Cannot read property 'textContent' of null\n
