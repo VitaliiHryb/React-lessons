@@ -12,7 +12,7 @@ const App = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="navigation__item">
-            <Link to="/products">Products</Link>
+            <Link to="/products">products</Link>
           </li>
         </ul>
 
