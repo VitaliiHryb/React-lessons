@@ -18,9 +18,7 @@ function Products({ match }) {
         <Route exact path={match.url}>
           <span>Select a product please</span>
         </Route>
-        <Route path={`${match.url}/:productId`}>
-          <Product />
-        </Route>
+        <Route path={`${match.url}/:productId`} component={Product} />
       </Switch>
     </div>
   );
@@ -29,3 +27,10 @@ function Products({ match }) {
 export default Products;
 
 // <Route path={`${match.url}/:productId`} component={Product} />
+
+// with Hooks
+/*
+<Route path={`${match.url}/:productId`}>
+          <Product />
+        </Route>
+*/
