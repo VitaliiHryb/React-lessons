@@ -3,6 +3,7 @@ import { Link, Switch, Route, useParams } from 'react-router-dom';
 import Product from './Product';
 
 function Products({ match }) {
+  console.log(match);
   return (
     <div className="page__content">
       <h1>Products</h1>

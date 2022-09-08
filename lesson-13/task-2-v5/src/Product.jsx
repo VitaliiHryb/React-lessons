@@ -7,7 +7,7 @@ const Product = ({ match }) => {
 
 export default Product;
 
-// Expected: \"To products\"\nReceived: \"To Products\"\
+// "TypeError: Cannot read property 'textContent' of null\n
 
 // hope it is it
 // {`product is a ${match.params.productId}`}
