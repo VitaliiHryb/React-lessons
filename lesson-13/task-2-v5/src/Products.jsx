@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Switch, Route, useParams } from 'react-router-dom';
+import { Link, Switch, Route } from 'react-router-dom';
 import Product from './Product';
 
 function Products({ match }) {
@@ -27,7 +27,7 @@ function Products({ match }) {
 
 export default Products;
 
-// Expected: \"To products\"\nReceived: \"To Products\"\
+// "TypeError: Cannot read property 'textContent' of null\n
 
 // <Route path={`${match.url}/:productId`} component={Product} />
 

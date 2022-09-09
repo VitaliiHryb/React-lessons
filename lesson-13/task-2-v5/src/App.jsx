@@ -27,6 +27,8 @@ const App = () => {
 
 export default App;
 
+// "TypeError: Cannot read property 'textContent' of null\n
+
 /*
 <Switch>
   <Route exact path="/">
@@ -37,5 +39,3 @@ export default App;
   </Route>
 </Switch>;
 */
-
-// Expected: \"To products\"\nReceived: \"To Products\"\

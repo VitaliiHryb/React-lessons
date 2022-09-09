@@ -2,7 +2,10 @@ import React from 'react';
 // import { useParams } from 'react-router-dom';
 
 const Product = ({ match }) => {
-  return <div className="page__content">{match.params.productId}</div>;
+  console.log(match.params);
+  return (
+    <div className="page__content">{`You have chosen a ${match.params.productId}`}</div>
+  );
 };
 
 export default Product;
