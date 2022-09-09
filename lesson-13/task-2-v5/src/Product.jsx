@@ -4,7 +4,7 @@ import React from 'react';
 const Product = ({ match }) => {
   console.log(match.params);
   return (
-    <div className="page__content">{`You have chosen a ${match.params.productId}`}</div>
+    <div className="product">{`You have chosen a ${match.params.productId}`}</div>
   );
 };
 
