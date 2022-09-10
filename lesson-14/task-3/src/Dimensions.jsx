@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-const Dimentions = () => {
+const Dimensions = () => {
   const [dimensions, setDimentions] = useState({
     width: null,
     height: null,
@@ -63,4 +63,4 @@ class Dimentions extends React.Component {
 }
 */
 
-export default Dimentions;
+export default Dimensions;

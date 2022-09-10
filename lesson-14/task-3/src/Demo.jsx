@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Dimentions from './Dimentions';
+import Dimensions from './Dimensions';
 // import Home from './Home';
 
 const Demo = () => {
@@ -16,7 +16,7 @@ const Demo = () => {
           Hide
         </button>
       </div>
-      {isVisible && <Dimentions />}
+      {isVisible && <Dimensions />}
     </div>
   );
 };
