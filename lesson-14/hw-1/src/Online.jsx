@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Online = () => {
-  return <div className="status">Online</div>;
+  return <div className="status">online</div>;
 };
 
 export default Online;
