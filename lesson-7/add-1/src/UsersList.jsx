@@ -53,7 +53,7 @@ export default UsersList;
 // 1. отрисовать список методом map
 // добавляем логику
 // 2. functional Component ==> class Component
-// 3. methods
+// 3. methods + state
 // 3.1 goPrev ==> currentPage - 1
 // 3.2 goNext ==> currentPage + 1
 // 4. use slice() for pagination
